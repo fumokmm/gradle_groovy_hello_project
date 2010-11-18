@@ -1,0 +1,10 @@
+apply plugin: 'groovy'
+
+repositories {
+  flatDir(dirs: file('lib'))
+}
+
+dependencies {
+  groovy module(':groovy-all:1.7.5')
+  groovy module(':junit:4.8.1')
+}
