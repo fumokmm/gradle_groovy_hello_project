@@ -1,7 +1,13 @@
 apply plugin: 'groovy'
 
+defaultTasks 'build'
+
+def GRADLE_HOME = '/opt/local/share/java/gradle'
+def GROOVY_HOME = '/opt/local/share/java/groovy'
+
 repositories {
-  flatDir(dirs: file('lib'))
+  flatDir(dirs: file("${GROOVY_HOME}/lib"))
+  flatDir(dirs: file("${GRADLE_HOME}/lib"))
 }
 
 dependencies {
